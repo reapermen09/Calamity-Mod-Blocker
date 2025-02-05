@@ -1,0 +1,3 @@
+displayName = Calamity Mod Blocker
+author = Reaper
+version = 0.1
