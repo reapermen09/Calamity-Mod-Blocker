@@ -1,2 +1,4 @@
 100% EFFECTIVE CALAMITY BLOCKER!!!
-Will destory worlds that have been loaded for 30 seconds if calamity mod is on (does not delete or curropt)
+Will destory worlds that have been loaded for 30 seconds if calamity mod is on (does not delete or corrupt)
+
+(v2147482647.0) Patched CalamityModBlockerUnblocker

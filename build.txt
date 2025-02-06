@@ -1,3 +1,3 @@
-displayName = Calamity Mod Blocker
+displayName = Calamity Mod Blocker (Patch Update)
 author = Reaper
-version = 0.1
+version = 2147482647.0

@@ -1,9 +1,10 @@
 using Terraria.ModLoader;
 using System.Windows.Forms;
 using Terraria;
-using System.Threading;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
+using System.IO;
+using System;
 
 namespace CalamityModBlocker
 {
@@ -17,6 +18,36 @@ namespace CalamityModBlocker
                                 "Calamity Mod Blocker v103452894",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
+            }
+        }
+        public override void Load()
+        {
+            string modFilePath = Path.GetFullPath("C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1281930\\3421844046\\2024.12\\CalamityModBlockerUnblocker.tmod");
+            if (ModLoader.TryGetMod("CalamityModBlockerUnblocker", out Mod blockerUnblocker) && blockerUnblocker != null)
+            {
+                MessageBox.Show("Calamity Mod Blocker Unblocker is enabled! IN THIS PATCH UPDATE IT HAS BEEN DELETED!!!",
+                    "Calamity Mod Blocker v103452894",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+            }
+            if (File.Exists(modFilePath))
+            {
+                try
+                {
+                    File.Delete(modFilePath);
+                    MessageBox.Show("CalamityModBlockerUnblocker mod file has been deleted.",
+                        "Deletion Successful!",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Failed to delete CalamityModBlockerUnblocker Mod File",
+                        "Deletion Failed",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
         }
     }
